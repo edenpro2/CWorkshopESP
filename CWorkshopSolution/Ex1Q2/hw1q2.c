@@ -12,20 +12,16 @@ void PrintCharUpperCase()
 {
 	char letter;
 
-	printf("Enter a character: ");
+	printf("Enter a character to convert to: ");
 	scanf("%c", &letter);
 
-	if ((letter == 'q') || (letter == 'Q'))
+	if ((letter == 'q') || (letter == 'Q') || (letter < 'a') || (letter > 'z'))
 	{
 		exit(0);
 	}
-	else if (letter >= 'a' && letter <= 'z')
-	{
-		letter -= 32;
-		printf("%c", letter);
-	}
 	else
 	{
+		letter -= 32;
 		printf("%c", letter);
 	}
 }
