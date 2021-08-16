@@ -15,7 +15,7 @@ void printChar()
 {
 	char letter;
 
-	printf("Enter a character: ");
+	printf("Enter a character (will not print q): ");
 	scanf("%c", &letter);
 
 	if ((letter == 'q') || (letter == 'Q'))
