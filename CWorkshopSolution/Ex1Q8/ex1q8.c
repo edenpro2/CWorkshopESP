@@ -18,11 +18,13 @@ int main()
 void MinAndMax()
 {
 	int input;
+        printf("Enter number: ");
 	scanf("%d", &input);
 	int min = input, max = input;
 
 	while (true)
 	{
+                printf("Enter a number: ");
 		scanf("%d", &input);
 		if (input == 0)
 		{
