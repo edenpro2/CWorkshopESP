@@ -12,7 +12,7 @@
 void PrintReverse()
 {
 	int input;
-
+        printf("Enter a sequence of numbers. Use zero to terminate: ");
 	scanf("%d", &input);
 	if (input == 0)
 	{
