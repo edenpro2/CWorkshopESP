@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 #ifndef _PRINTCHAR_H_
 #define _PRINTCHAR_H_
 

@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include <math.h>
  
-uint64_t OptiFibonacci(uint fibTerm)
+uint64_t OptiFibonacci(int fibTerm)
 {
-    return (pow(((1 + sqrt(5)) / 2), fibTerm) - pow(((1 - sqrt(5)) / 2), fibTerm)) / sqrt(5); 
+    return (powl(((1 + sqrtl(5)) / 2), fibTerm) - powl(((1 - sqrtl(5)) / 2), fibTerm)) / sqrtl(5);
 }
     
 
 int main()
 {
-    uint fibInput;
+    int64_t fibInput;
     printf("Enter a number for the nth Fibonacci term: ");
     do
     {
-        scanf_s("%d", &fibInput);
+        scanf_s("%llu", &fibInput);
         if (fibInput < 0)
         {
             printf("Number entered is negative");
@@ -22,6 +22,6 @@ int main()
 
     } while (fibInput < 0);
 
-    printf("term at %d place: %llu", fibInput, OptiFibonacci(fibInput));
+    printf("term at %llu place: %llu", fibInput, OptiFibonacci(fibInput));
 
 }

@@ -9,6 +9,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include "printChar.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 void printChar()
@@ -18,12 +19,17 @@ void printChar()
 	printf("Enter a character (will not print q): ");
 	scanf_s("%c", &letter, 1);
 
-	if ((letter == 'q') || (letter == 'Q'))
-	{
-		exit(0);
-	}
-	else
+	if (((letter >= 'a') && (letter <= 'z') || ((letter >= 'A') && (letter <= 'Z'))) && (letter != 'q') && (letter != 'Q'))
 	{
 		printf("%c", letter);
 	}
+	else
+	{
+		exit(0);
+	}
+}
+
+int main()
+{
+	printChar();
 }
