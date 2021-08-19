@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include <math.h>
 
-int64_t Fibonacci(uint fibTerm)
+uint Fibonacci(uint fibTerm)
 {
-    return (pow(((1 + sqrt(5)) / 2), fibTerm) - pow(((1 - sqrt(5)) / 2), fibTerm)) / sqrt(5);
+    if (fibTerm <= 1)
+        return fibTerm;
+    return Fibonacci(fibTerm - 1) + Fibonacci(fibTerm - 2);
 }
 
 int main()

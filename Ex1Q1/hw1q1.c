@@ -9,14 +9,14 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include "printChar.h"
-
+#include <stdio.h>
 
 void printChar()
 {
 	char letter;
 
 	printf("Enter a character (will not print q): ");
-	scanf("%c", &letter);
+	scanf_s("%c", &letter, 1);
 
 	if ((letter == 'q') || (letter == 'Q'))
 	{
