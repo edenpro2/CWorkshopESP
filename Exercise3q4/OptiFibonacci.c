@@ -4,7 +4,7 @@
  
 uint64_t OptiFibonacci(int fibTerm)
 {
-    return (powl(((1 + sqrtl(5)) / 2), fibTerm) - powl(((1 - sqrtl(5)) / 2), fibTerm)) / sqrtl(5);
+    return (fibTerm < 93) ? (powl(((1 + sqrtl(5)) / 2), fibTerm) - powl(((1 - sqrtl(5)) / 2), fibTerm)) / sqrtl(5) : 0;
 }
     
 
