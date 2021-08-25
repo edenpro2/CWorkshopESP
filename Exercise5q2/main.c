@@ -1,6 +1,12 @@
 #include "Complex.c"
 #include <stdio.h>
 
+Complex getComplexNum(a, b)
+{
+         printf("Enter number");
+         Complex temp;
+         scanf("%l    
+         
 
 enum Operations
 {
@@ -15,17 +21,19 @@ int main()
 	{
 		switch (input)
 		{
-		case ADD:
-
+                case EXIT:
 			break;
+
+		case ADD:
+                     
+                        break;
 		case SUB:
 			break;
 		case MULT:
 			break;
 		case DIV:
 			break;
-		case EXIT:
-			break;
+		
 		default:
 			printf("Number entered unrecognized");
 		}
