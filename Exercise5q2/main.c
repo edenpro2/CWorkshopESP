@@ -1,12 +1,16 @@
 #include "Complex.c"
 #include <stdio.h>
 
-Complex getComplexNum(a, b)
+Complex getComplexNum()
 {
-         printf("Enter number");
+         printf("enter 0 for real or 1 for complex");  
+            
+         Complex temp
+         printf("Enter complex number");
          Complex temp;
-         scanf("%l    
-         
+         scanf("%d%h", temp.real, temp.imaginary);   
+         return temp;
+}
 
 enum Operations
 {
