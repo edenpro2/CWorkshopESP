@@ -78,7 +78,21 @@ Complex_f ComplexFractionMult(Complex_f a, Complex_f b)
 	return result;
 }
 
-C
+Complex_f ComplexFractionDiv(Complex_f a, Complex_f b)
+{
+	Complex_f result =
+	{
+		result.denominator = ComplexMult(a.denominator, b.numerator),
+		result.numerator = ComplexMult(ComplexMult(a.numerator, b.denominator), (result.denominator))
+	};
+
+	/* Conjugate and multiply */
+	result.denominator = ComplexMult(result.denominator, Conjugate(result.denominator));
+	result.numerator = ComplexMult(result.numerator, Conjugate(result.denominator));
+
+	return result;
+}
+
 Complex Conjugate(Complex z)
 {
 	z.imaginary = (0 - z.imaginary);
